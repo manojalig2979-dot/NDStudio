@@ -1,0 +1,50 @@
+{
+  "id": "/",
+  "name": "NDStudio — AI Reel & Short Video Studio",
+  "short_name": "NDStudio",
+  "description": "Create viral vertical reels and shorts with AI script, voiceover, and multi-track audio mixing.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090d",
+  "theme_color": "#7c3aed",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open Studio",
+      "short_name": "Studio",
+      "description": "Launch the multi-track reel editor",
+      "url": "/studio",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Project Library",
+      "short_name": "Projects",
+      "description": "View saved reels and drafts",
+      "url": "/projects",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["video", "productivity", "utilities", "entertainment"]
+}
