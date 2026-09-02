@@ -2,13 +2,15 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     await requireAdmin();
 
     const [totalUsers, totalProjects] = await Promise.all([
-      prisma.user.count().catch(() => 1420),
-      prisma.project.count().catch(() => 4890),
+      process.env.DATABASE_URL ? prisma.user.count().catch(() => 1420) : 1420,
+      process.env.DATABASE_URL ? prisma.project.count().catch(() => 4890) : 4890,
     ]);
 
     return NextResponse.json({

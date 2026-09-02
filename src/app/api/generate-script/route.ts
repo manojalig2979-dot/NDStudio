@@ -6,6 +6,8 @@ const openai = process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY !== "you
   ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
   : null;
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
